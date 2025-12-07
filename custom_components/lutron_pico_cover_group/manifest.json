@@ -17,5 +17,6 @@
   "iot_class": "calculated",
   "requirements": [],
   "version": "0.1",
+  "homeassistant": "2025.11",
   "integration_type": "helper"
 }

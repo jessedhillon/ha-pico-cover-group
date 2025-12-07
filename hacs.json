@@ -1,0 +1,7 @@
+{
+  "name": "Lutron Pico Cover Groups",
+  "render_readme": true,
+  "content_in_root": false,
+  "country": ["US"],
+  "homeassistant": "2025.11"
+}
