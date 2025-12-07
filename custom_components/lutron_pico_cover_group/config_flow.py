@@ -11,7 +11,7 @@ from homeassistant.components.button import DOMAIN as BUTTON_DOMAIN
 from homeassistant.components.cover import DOMAIN as COVER_DOMAIN
 
 
-DOMAIN = "cover_group"
+DOMAIN = "lutron_pico_cover_group"
 LUTRON_CASETA_DOMAIN = "lutron_caseta"
 
 

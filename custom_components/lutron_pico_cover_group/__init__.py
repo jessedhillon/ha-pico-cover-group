@@ -5,7 +5,7 @@ from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 
 
-DOMAIN = "cover_group"
+DOMAIN = "lutron_pico_cover_group"
 LUTRON_CASETA_DOMAIN = "lutron_caseta"
 PLATFORMS = [Platform.COVER]
 
