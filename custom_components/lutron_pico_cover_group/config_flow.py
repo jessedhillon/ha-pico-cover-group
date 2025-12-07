@@ -147,14 +147,14 @@ class CoverGroupsConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         ent_reg = entity_registry.async_get(self.hass)
         buttons = [ent for ent in ent_reg.entities.values()
                    if ent.device_id == self.pico_device and ent.domain == BUTTON_DOMAIN]
-        selector_config: selector.EntitySelectorConfig = {
-            "multiple": False,
-            "include_entities": [ent.entity_id for ent in buttons]
-        }
+        selector_config = selector.EntitySelectorConfig(
+            multiple=False,
+            include_entities=[ent.entity_id for ent in buttons],
+        )
         schema = vol.Schema({
-            vol.Required("open_button"): selector_config,
-            vol.Required("stop_button"): selector_config,
-            vol.Required("close_button"): selector_config,
+            vol.Required("open_button"): selector.EntitySelector(selector_config),
+            vol.Required("stop_button"): selector.EntitySelector(selector_config),
+            vol.Required("close_button"): selector.EntitySelector(selector_config),
         })
 
         if user_input is None:
