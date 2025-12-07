@@ -1,0 +1,21 @@
+{
+  "domain": "lutron_pico_cover_group",
+  "name": "Lutron Pico Cover Group",
+  "codeowners": [
+    "@jessedhillon"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "lutron_caseta"
+  ],
+  "after_dependencies": [
+    "button",
+    "cover"
+  ],
+  "documentation": "https://github.com/jessedhillon/ha-pico-cover-group",
+  "issue_tracker": "https://github.com/jessedhillon/ha-pico-cover-group/issues",
+  "iot_class": "calculated",
+  "requirements": [],
+  "version": "0.1",
+  "integration_type": "helper"
+}

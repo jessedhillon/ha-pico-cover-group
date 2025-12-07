@@ -1,0 +1,62 @@
+{
+  "config": {
+    "step": {
+      "start_group": {
+        "title": "Start new cover group",
+        "description": "Enter the name for the new group, e.g. \"Office Windows\"",
+        "data": {
+          "name": "Group name"
+        }
+      },
+      "select_remote": {
+        "title": "Select Pico remote",
+        "description": "Select the Pico remote device which is **already configured** in your Lutron Smart Bridge to control this cover group.\n\n**NOTE** this helper component does not configure covers to respond to the selected Pico, you must do that separately in the Lutron Smart Bridge management interface (_e.g._ Lutron mobile app)",
+        "data": {
+          "pico_device": "Pico device"
+        }
+      },
+      "select_buttons": {
+        "title": "Assign buttons",
+        "description": "Select the Pico button entities corresponding to the open, stop, and close actions.",
+        "data": {
+          "open_button": "Open button",
+          "stop_button": "Stop button",
+          "close_button": "Close button"
+        }
+      },
+      "select_covers": {
+        "title": "Select covers",
+        "description": "Select the Lutron covers which belong to this group. These selections will be used only to present the group's state, and should reflect the configuration of this group in the Smart Bridge.\n\n**NOTE** this helper component does not configure covers to respond to the selected Pico, you must do that separately in the Lutron Smart Bridge management interface (_e.g._ Lutron mobile app)",
+        "data": {
+          "covers": "Covers in this group"
+        }
+      }
+    },
+    "error": {
+      "no_lutron_buttons": "No Lutron button entities found. Please ensure Pico remotes are configured.",
+      "no_lutron_covers": "No Lutron cover entities found. Please ensure covers are configured.",
+      "duplicate_buttons": "Each button must be unique",
+      "no_covers_selected": "At least one cover must be selected"
+    },
+    "abort": {
+      "no_lutron": "Lutron Caseta integration not found. Please set it up first."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Manage cover group",
+        "data": {
+          "name": "Group name",
+          "open_button": "Open button",
+          "stop_button": "Stop button",
+          "close_button": "Close button",
+          "covers": "Covers in this group"
+        }
+      }
+    },
+    "error": {
+      "no_covers_selected": "At least one cover must be selected"
+    }
+  }
+}

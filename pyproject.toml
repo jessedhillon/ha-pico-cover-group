@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "ha-pico-cover-group"
+version = "0.1.0"
+description = "Lutron Pico-based cover group helper for Home Assistant"
+authors = ["Jesse Dhillon <jesse@dhillon.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+homeassistant = { version = "*", optional = true }
+pylutron-caseta = "*"
+
+[tool.poetry.extras]
+dev = ["homeassistant"]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-homeassistant-custom-component = "*"
+ruff = "*"
+pyright = "*"
+types-setuptools = "*"
+
+[tool.ruff]
+line-length = 120
+lint.select = [ "E", "F", "B", "T" ]
+lint.extend-ignore = [
+    "I",
+    "B008"  # calling function in parameter list
+]
+preview = true
+target-version = "py313"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
