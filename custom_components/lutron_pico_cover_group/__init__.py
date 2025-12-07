@@ -3,7 +3,6 @@ from typing import Any
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers.typing import HomeAssistantType
 
 
 DOMAIN = "cover_group"
@@ -12,7 +11,7 @@ PLATFORMS = [Platform.COVER]
 
 
 async def async_setup_entry(
-    hass: HomeAssistantType,
+    hass: HomeAssistant,
     entry: ConfigEntry,
 ) -> bool:
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
